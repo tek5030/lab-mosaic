@@ -65,6 +65,7 @@ How can we remove these effects with `cv::erode`? Try!
 Now you are finished with lab 4! 
 But if you still have some time left, or want to continue with this lab at home, there is other cool stuff you can try:
 - Try `cv::findHomography()` instead of our method.
+- Use the estimated homography to search for more, weaker correspondences. Then recompute!
 - Use the keypoint detector you implemented in lab 3.
 - Apply blending to the mosaic, like we did in lab 2.
 - Expand the program to make a mosaic of more than two images.
