@@ -23,9 +23,9 @@ We have chosen to distribute the code on the following files:
   
   Starts lab 4, catches any exceptions and prints their error message on the console.
 
-- *lab_4.h, lab_4.cpp*
+- *lab_mosaic.h, lab_mosaic.cpp*
   
-  Implements the lab 4 loop:
+  Implements the lab loop:
   - Get next frame.
   - Detect keypoints.
   - Compute descriptors and match descriptors with reference frame.
