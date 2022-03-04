@@ -162,7 +162,7 @@ float HomographyEstimator::computeReprojectionError(const Eigen::Vector2f& pt1, 
   Eigen::Vector2f pt_1_in_2;
   Eigen::Vector2f pt_2_in_1;
 
-  // Compute the two-sided reprojection error \sigma_i.
+  // Compute the two-sided reprojection error \epsilon_i.
   return 2*distance_threshold_; // Remove this dummy result!
 }
 
