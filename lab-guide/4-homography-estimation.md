@@ -9,20 +9,20 @@ We can often achieve a better result if we perform the estimation on normalized 
 
 ## 4. Understand how we estimate the homography
 Lets take a look at how we have implemented all this math! 
-First, study the class declaration and documentation in [homography_estimator.h](https://github.com/tek5030/lab_04/blob/master/homography_estimator.h). 
-Then go to [homography_estimator.cpp](https://github.com/tek5030/lab_04/blob/master/homography_estimator.cpp):
+First, study the class declaration and documentation in [homography_estimator.h](../homography_estimator.h). 
+Then go to [homography_estimator.cpp](../homography_estimator.cpp):
 
-- Look at `HomographyEstimator::dltEstimator` in [homography_estimator.cpp:87](https://github.com/tek5030/lab_04/blob/master/homography_estimator.cpp#L87):
+- Look at `HomographyEstimator::dltEstimator`:
   - Try to identify steps 1-4 in the DLT above.
-- Look at `HomographyEstimator::normalizedDltEstimator` in [homography_estimator.cpp:114](https://github.com/tek5030/lab_04/blob/master/homography_estimator.cpp#L114):
+- Look at `HomographyEstimator::normalizedDltEstimator`:
   - Try to identify steps 1-3 in the normalized DLT above.
   - What does the normalizing similarity do?
-- Look at `HomographyEstimator::ransacEstimator` in [homography_estimator.cpp:33](https://github.com/tek5030/lab_04/blob/master/homography_estimator.cpp#L33):
+- Look at `HomographyEstimator::ransacEstimator`:
   - How many point correspondences do we sample each iteration of the RANSAC loop? Why?
   - Which homography estimation algorithm do we use in the RANSAC loop? DLT or normalized DLT? Why not the other one?
-  - This method returns a `PointSelection`. What is that? (Hint: Check [homography_estimator.h](https://github.com/tek5030/lab_04/blob/master/homography_estimator.h)).
-- Look at `HomographyEstimator::estimate` in [homography_estimator.cpp:11](https://github.com/tek5030/lab_04/blob/master/homography_estimator.cpp#L11):
-  - This method returns a `HomographyEstimate`. What is that? (Hint: Check [homography_estimator.h](https://github.com/tek5030/lab_04/blob/master/homography_estimator.h))
+  - This method returns a `PointSelection`. What is that? (Hint: Check [homography_estimator.h](../homography_estimator.h)).
+- Look at `HomographyEstimator::estimate`:
+  - This method returns a `HomographyEstimate`. What is that? (Hint: Check [homography_estimator.h](../homography_estimator.h))
 
 
 ## 5. Compute the reprojection error
@@ -50,7 +50,7 @@ When you are happy with your implementation, compile and run the program.
 Choose a reference and perform matching by pressing *<space>*. 
 Use debugging tools or printouts to the console to check that your implementation computes reasonable results.
 
-You definitely want to compile and run the program in *release mode* (see [lab 3.3](https://github.com/tek5030/lab_03/blob/master/lab-guide/3-detect-circles-from-corners-with-ransac.md)) when you are finished debugging.
+You definitely want to compile and run the program in *release mode* (see [lab-corners](https://github.com/tek5030/lab-corners/blob/master/lab-guide/3-detect-circles-from-corners-with-ransac.md#compile-and-run-with-build-type-release)) when you are finished debugging.
 
 Now, lets use the computed homography to combine the current frame with the reference in an image mosaic!
 Please continue to the [next step](5-creating-an-image-mosaic.md).

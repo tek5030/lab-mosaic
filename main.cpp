@@ -1,11 +1,11 @@
-#include "lab_4.h"
+#include "lab_mosaic.h"
 #include <iostream>
 
 int main()
 {
   try
   {
-    lab4();
+    runLabMosaic();
   }
   catch (const std::exception& e)
   {

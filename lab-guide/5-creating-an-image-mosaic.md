@@ -2,7 +2,7 @@
 We will in this last part use the computed homography to combine the images in a common pixel coordinate system (a common image).
 
 ## 6. What does the similarity *S* do?
-In `lab4()` at [lab_4.cpp:57](https://github.com/tek5030/lab_04/blob/master/lab_4.cpp#L57), we have defined the similarity *S* as:
+In `runLabMosaic()` at [lab_mosaic.cpp](../lab_mosaic.cpp), we have defined the similarity *S* as:
 
 ```c++
 cv::Matx33f S_cv{
@@ -32,7 +32,7 @@ cv::Mat frame_warp;
 cv::warpPerspective(frame, frame_warp, /* ? */, frame.size());
 ```
 
-What happens if you try to insert this image into the mosaic, rather than `frame_warp`?
+What happens if you set `mosaic = frame_warp`?
 
 
 ## 9. Compute a mask for the transformed current frame
@@ -66,6 +66,6 @@ Now you are finished with lab 4!
 But if you still have some time left, or want to continue with this lab at home, there is other cool stuff you can try:
 - Try `cv::findHomography()` instead of our method.
 - Use the estimated homography to search for more, weaker correspondences. Then recompute!
-- Use the keypoint detector you implemented in lab 3.
-- Apply blending to the mosaic, like we did in lab 2.
+- Use the keypoint detector you implemented in [lab-corners](https://github.com/tek5030/lab-corners).
+- Apply blending to the mosaic, like we did in [lab-image-blending](https://github.com/tek5030/lab-image-blending).
 - Expand the program to make a mosaic of more than two images.

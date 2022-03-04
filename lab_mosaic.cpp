@@ -1,4 +1,4 @@
-#include "lab_4.h"
+#include "lab_mosaic.h"
 
 #include "homography_estimator.h"
 #include "feature_utils.h"
@@ -34,26 +34,31 @@ void drawKeypointMatches(cv::Mat& vis_img,
 void drawEstimationDetails(cv::Mat& vis_img, DurationInMs est_duration, size_t num_inliers);
 
 
-void lab4()
+void runLabMosaic()
 {
   // Open video stream from camera.
   const int camera_id = 0; // Should be 0 or 1 on the lab PCs.
   cv::VideoCapture cap(camera_id);
+
+  // Set frame size.
+  const int frame_cols = 640;
+  const int frame_rows = 480;
+  cap.set(cv::CAP_PROP_FRAME_WIDTH, frame_cols);
+  cap.set(cv::CAP_PROP_FRAME_HEIGHT, frame_rows);
+
   if (!cap.isOpened())
   {
     throw std::runtime_error("Could not open camera " + std::to_string(camera_id));
   }
 
   // Set up windows.
-  const std::string match_win = "Lab 4: Feature detection and matching";
+  const std::string match_win = "Feature detection and matching";
   cv::namedWindow(match_win);
-  const std::string mosaic_win = "Lab 4: Mosaic";
+  const std::string mosaic_win = "Mosaic";
   cv::namedWindow(mosaic_win);
 
   // Set up a similarity transform.
   // Question: What does this similarity transform do?
-  int frame_cols = static_cast<int>(cap.get(cv::CAP_PROP_FRAME_WIDTH));
-  int frame_rows = static_cast<int>(cap.get(cv::CAP_PROP_FRAME_HEIGHT));
   cv::Matx33f S_cv{
       0.5f, 0.0f, 0.25f * static_cast<float>(frame_cols),
       0.0f, 0.5f, 0.25f * static_cast<float>(frame_rows),
@@ -62,8 +67,8 @@ void lab4()
   // Todo 1: Experiment with blob and corner feature detectors.
   // Todo 3: Experiment with feature matching
   // Set up objects for detection, description and matching.
-  cv::Ptr<cv::Feature2D> detector = cv::xfeatures2d::SURF::create();
-  cv::Ptr<cv::Feature2D> desc_extractor = cv::xfeatures2d::SURF::create();
+  cv::Ptr<cv::Feature2D> detector = cv::ORB::create(1000);
+  cv::Ptr<cv::Feature2D> desc_extractor = cv::ORB::create();
   cv::BFMatcher matcher{desc_extractor->defaultNorm()};
 
   // Create homography estimator.
@@ -92,7 +97,7 @@ void lab4()
     auto start = Clock::now();
     std::vector<cv::KeyPoint> frame_keypoints;
     detector->detect(gray_frame, frame_keypoints);
-    cv::KeyPointsFilter::retainBest(frame_keypoints, 500);
+    cv::KeyPointsFilter::retainBest(frame_keypoints, 1000);
     auto end = Clock::now();
     DurationInMs feature_detection_duration = end - start;
 

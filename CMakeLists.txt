@@ -1,6 +1,6 @@
 cmake_minimum_required( VERSION 3.5.1 )
 
-project(lab_4_mosaic)
+project(lab_mosaic)
 
 # Compiler flags
 if (MSVC)
@@ -20,8 +20,8 @@ add_executable(${PROJECT_NAME}
   feature_utils.cpp
   homography_estimator.h
   homography_estimator.cpp
-  lab_4.h
-  lab_4.cpp
+  lab_mosaic.h
+  lab_mosaic.cpp
   )
 
 target_link_libraries(${PROJECT_NAME}
