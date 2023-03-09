@@ -1,7 +1,7 @@
 # Step 2: Features in OpenCV
 There are several feature methods available in the [features2d] and [xfeatures2d] modules in OpenCV. 
 Some of these are detectors, some compute descriptors and some do both. 
-They all extend the abstact [`cv::Feature2D`] base class.
+They all extend the abstract [`cv::Feature2D`] base class.
 
 First, please take a look at the documentation above to get an overview.
 Then, lets try it out!
