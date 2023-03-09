@@ -21,7 +21,7 @@ The main steps in today's lab are:
 We have chosen to distribute the code on the following files:
 - *main.cpp*
   
-  Starts lab 4, catches any exceptions and prints their error message on the console.
+  Launches the program, catches any exceptions and prints their error message on the console.
 
 - *lab_mosaic.h, lab_mosaic.cpp*
   
