@@ -42,9 +42,7 @@ and *H*<sup>-1</sup> is its inverse:
 
 In `HomographyEstimator::computeReprojectionError` you need to compute the reprojection error for a point correspondence. 
 
-Hint: Use [Eigen::Matrixbase::homogeneous()](https://eigen.tuxfamily.org/dox/group__Geometry__Module.html#gaf3229c2d3669e983075ab91f7f480cb1), 
-[Eigen:Matrixbase::hnormalized()](https://eigen.tuxfamily.org/dox/group__Geometry__Module.html#gadc0e3dd3510cb5a6e70aca9aab1cbf19) 
-and [Eigen::Matrixbase::norm()](https://eigen.tuxfamily.org/dox/classEigen_1_1MatrixBase.html#a196c4ec3c8ffdf5bda45d0f617154975).
+Hint: Use [`Eigen::Matrixbase::homogeneous()`], [`Eigen::Matrixbase::hnormalized()`] and [`Eigen::Matrixbase::norm()`].
 
 When you are happy with your implementation, compile and run the program. 
 Choose a reference and perform matching by pressing *<space>*. 
@@ -54,3 +52,8 @@ You definitely want to compile and run the program in *release mode* (see [lab-c
 
 Now, lets use the computed homography to combine the current frame with the reference in an image mosaic!
 Please continue to the [next step](5-creating-an-image-mosaic.md).
+
+
+[`Eigen::Matrixbase::homogeneous()`]: https://eigen.tuxfamily.org/dox/group__Geometry__Module.html#gaf3229c2d3669e983075ab91f7f480cb1
+[`Eigen::Matrixbase::hnormalized()`]: https://eigen.tuxfamily.org/dox/group__Geometry__Module.html#gadc0e3dd3510cb5a6e70aca9aab1cbf19
+[`Eigen::Matrixbase::norm()`]:        https://eigen.tuxfamily.org/dox/classEigen_1_1MatrixBase.html#a196c4ec3c8ffdf5bda45d0f617154975
