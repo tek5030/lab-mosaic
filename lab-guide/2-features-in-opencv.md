@@ -72,10 +72,10 @@ This is a pretty advanced program, so ask the instructors if you have trouble un
 Then, please continue to the [next step](3-experiment-with-feature-matching.md).
 
 
-[features2d]:  https://docs.opencv.org/4.5.5/da/d9b/group__features2d.html
-[xfeatures2d]: https://docs.opencv.org/4.5.5/d1/db4/group__xfeatures2d.html
-[`cv::Feature2D`]: https://docs.opencv.org/4.5.5/d0/d13/classcv_1_1Feature2D.html
-[`cv::KeyPoints`]: https://docs.opencv.org/4.5.5/d2/d29/classcv_1_1KeyPoint.html
-[`cv::DMatch`]:    https://docs.opencv.org/4.5.5/d4/de0/classcv_1_1DMatch.html
+[features2d]:  https://docs.opencv.org/4.9.0/da/d9b/group__features2d.html
+[xfeatures2d]: https://docs.opencv.org/4.9.0/d1/db4/group__xfeatures2d.html
+[`cv::Feature2D`]: https://docs.opencv.org/4.9.0/d0/d13/classcv_1_1Feature2D.html
+[`cv::KeyPoints`]: https://docs.opencv.org/4.9.0/d2/d29/classcv_1_1KeyPoint.html
+[`cv::DMatch`]:    https://docs.opencv.org/4.9.0/d4/de0/classcv_1_1DMatch.html
 [FAST]: https://www.edwardrosten.com/work/fast.html
 [LATCH]: https://talhassner.github.io/home/publication/2016_WACV_2

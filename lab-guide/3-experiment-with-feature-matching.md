@@ -25,7 +25,7 @@ Then go to the `extractGoodRatioMatches()` in [feature_utils.cpp](../feature_uti
 Use the inputs `matches` and `max_ratio` to perform the ratio test, and return only the (best) matches that passes this test.
 
 When your implementation seems reasonable, compile and run the program. 
-Press *\<space\>* to set the current frame to the reference frame. 
+Press <kbd>space</kbd> to set the current frame to the reference frame. 
 You should now see results from matching the next current frames with the reference. 
 Does your implementation still look reasonable?
 

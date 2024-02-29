@@ -5,7 +5,7 @@ We will as usual start by presenting an overview of the method and the contents 
 The main steps in today's lab are:
 - Apply feature detectors and descriptors available in OpenCV to detect and describe keypoints.
   - Detect keypoints in the current frame.
-  - Press *\<space\>* to set the current frame as the reference frame.
+  - Press <kbd>space</kbd> to set the current frame as the reference frame.
 
 - Match keypoints between the reference frame and new current frames using OpenCV, and extract good matches by applying the ratio test.
 
