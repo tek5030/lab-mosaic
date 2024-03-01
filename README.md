@@ -7,8 +7,11 @@ We will then use these correspondences to estimate a homography between the imag
 
 ![Screenshot from the lab](lab-guide/img/screenshot_lab4.png)
 
-Start by cloning this repository on your machine. 
-Then open the lab project in your editor.
+**Start** by cloning this repository on your machine. 
+
+Then, open the lab project in CLion using the cmake-file in the base directory:
+`lab-mosaic/CMakeLists.txt`.
+If you are uncertain about how this is done, please take a look at [the intro lab].
 
 The lab is carried out by following these steps:
 
@@ -24,17 +27,13 @@ Please try to solve the lab with help from others instead of just jumping straig
 Start the lab by going to the [first step](lab-guide/1-get-an-overview.md).
 
 ## Prerequisites
-- [Ensure Conan is installed on your system][conan], unless you are not on a lab computer.
-- Install project dependencies using conan:
+- OpenCV must be installed on your system. If you are on a lab computer, you are all set.
 
-   ```bash
-   # git clone https://github.com/tek5030/lab-mosaic.git
-   # cd lab-mosaic
+  If you are on Ubuntu, but not on a lab computer, we refer to [setup_scripts](https://github.com/tek5030/setup_scripts) and [the intro lab] as a general getting started-guide for the C++ labs on Ubuntu 22.04.
 
-   conan install . --install-folder=build --build=missing
-   ```
-- When you configure the project in CLion, remember to set `build` as the _Build directory_, as described in [lab_intro].
+  You will need to compile OpenCV from source to enable the `xfeatures`-module.
+
+---
 
 [TEK5030]: https://www.uio.no/studier/emner/matnat/its/TEK5030/
-[conan]: https://tek5030.github.io/tutorial/conan.html
-[lab_intro]: https://github.com/tek5030/lab-intro/blob/master/cpp/lab-guide/1-open-project-in-clion.md#6-configure-project
+[the intro lab]: https://github.com/tek5030/lab-intro/blob/master/cpp/lab-guide/1-open-project-in-clion.md
